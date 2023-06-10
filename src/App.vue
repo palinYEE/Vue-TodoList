@@ -41,28 +41,16 @@
 					></v-list-item>
 				</v-list>
 			</v-navigation-drawer>
-			<v-main style="height: 250px">
-				<v-expansion-panels class="mb-6" style="align-self: flex-start">
-					<v-expansion-panel v-for="i in 3" :key="i">
-						<v-expansion-panel-title expand-icon="mdi-menu-down">
-							오늘은 Vue 공부를 할거야
-							<AppMisc></AppMisc>
-						</v-expansion-panel-title>
-						<v-expansion-panel-text
-							>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
-						</v-expansion-panel-text>
-					</v-expansion-panel>
-				</v-expansion-panels>
+			<v-main style="height: 1000px">
+				<AppTodo></AppTodo>
 			</v-main>
 		</v-layout>
 	</v-card>
 </template>
 
 <script setup>
-import AppMisc from '@/components/AppMisc.vue';
+import AppTodo from './components/AppTodo.vue';
+
 import { ref } from 'vue';
 
 let drawer = ref(true);
